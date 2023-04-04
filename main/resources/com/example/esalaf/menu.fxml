@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="600.0" style="-fx-background-color: #f7f6fd;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.esalaf.MenuController">
+   <children>
+      <Button layoutX="214.0" layoutY="317.0" mnemonicParsing="false" onAction="#switchToProducts" prefHeight="66.0" prefWidth="169.0" text="Produits">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularExponent="40.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+
+            </Lighting>
+         </effect>
+      </Button>
+      <Button layoutX="403.0" layoutY="317.0" mnemonicParsing="false" onAction="#switchToOrders" prefHeight="66.0" prefWidth="176.0" text="Commandes">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+
+            </Lighting>
+         </effect>
+      </Button>
+      <Button layoutX="14.0" layoutY="319.0" mnemonicParsing="false" onAction="#switchToClients" prefHeight="66.0" prefWidth="176.0" text="Clients">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <effect>
+            <Lighting bumpInput="$null" diffuseConstant="2.0" specularConstant="0.0" specularExponent="20.55" surfaceScale="0.0">
+
+            </Lighting>
+         </effect>
+      </Button>
+      <ImageView fitHeight="80.0" fitWidth="86.0" layoutX="450.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="190.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="-2.0" layoutY="-4.0" prefHeight="74.0" prefWidth="606.0" text="         WElcome " />
+   </children>
+</AnchorPane>

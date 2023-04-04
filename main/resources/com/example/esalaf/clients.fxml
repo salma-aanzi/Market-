@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="600.0" style="-fx-background-color: BD9477;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.esalaf.ClientController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <TextField fx:id="ido" layoutX="-192.0" layoutY="448.0" />
+   <TableView fx:id="mytab" layoutX="31.0" layoutY="322.0" onMouseClicked="#tablehandleButtonAction" prefHeight="228.0" prefWidth="546.0" style="-fx-background-color: #EDF2F8;">
+     <columns>
+         <TableColumn fx:id="col_nom" prefWidth="126.0" style="-fx-background-color: F4DFBB;" text="Nom" />
+         <TableColumn fx:id="col_tele" minWidth="0.0" prefWidth="128.0" style="-fx-background-color: F4DFBB;" text="Telephone" />
+         <TableColumn fx:id="col_cin" prefWidth="290.66668701171875" style="-fx-background-color: F4DFBB;" text="CIN" />
+     </columns>
+   </TableView>
+   <TextField fx:id="filterField" layoutX="-106.0" layoutY="14.0" prefHeight="25.0" prefWidth="715.0" promptText="Search" style="-fx-background-color: F4DFBB;" />
+   <AnchorPane layoutX="9.0" layoutY="91.0" prefHeight="98.0" prefWidth="582.0" style="-fx-background-color: F4DFBB;">
+      <children>
+         <Label layoutX="11.0" layoutY="5.0" text="Nom :" textFill="#02222f">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+         <Label layoutX="11.0" layoutY="33.0" prefHeight="30.0" prefWidth="112.0" text="Téléphone :" textFill="#021c26">
+            <font>
+               <Font size="17.0" />
+            </font>
+         </Label>
+         <Label layoutX="11.0" layoutY="60.0" prefHeight="30.0" prefWidth="54.0" text="CIN :" textFill="#032c3c">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+         <TextField fx:id="tele" layoutX="150.0" layoutY="35.0" prefHeight="26.0" prefWidth="429.0" promptText="Téléphone" />
+         <TextField fx:id="cin" layoutX="150.0" layoutY="62.0" prefHeight="26.0" prefWidth="429.0" promptText="CIN" />
+         <TextField fx:id="nom" layoutX="150.0" layoutY="7.0" prefHeight="26.0" prefWidth="429.0" promptText="Nom" />
+      </children>
+   </AnchorPane>
+   <Button fx:id="ok" layoutX="469.0" layoutY="272.0" onAction="#onSaveButtonClick" prefHeight="26.0" prefWidth="125.0" text="Save" textAlignment="CENTER">
+      <effect>
+         <Lighting diffuseConstant="2.0" surfaceScale="0.0">
+            <bumpInput>
+               <Shadow />
+            </bumpInput>
+
+         </Lighting>
+      </effect>
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+   <Button layoutX="319.0" layoutY="272.0" mnemonicParsing="false" onAction="#clear" prefHeight="40.0" prefWidth="119.0" text="Update">
+      <effect>
+         <Lighting diffuseConstant="2.0" surfaceScale="0.0">
+            <bumpInput>
+               <Shadow />
+            </bumpInput>
+
+         </Lighting>
+      </effect>
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+   <Button fx:id="ok1" layoutX="177.0" layoutY="272.0" onAction="#onDeleteButtonClick" prefHeight="19.0" prefWidth="112.0" text="Delete">
+      <effect>
+         <Lighting diffuseConstant="2.0" surfaceScale="0.0">
+            <bumpInput>
+               <Shadow />
+            </bumpInput>
+
+         </Lighting>
+      </effect>
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+   <Button layoutX="36.0" layoutY="271.0" mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="40.0" prefWidth="112.0" style="-fx-background-color: 4D585C;" text="Edit">
+      <effect>
+         <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.0">
+            <bumpInput>
+               <Shadow />
+            </bumpInput>
+         </Lighting>
+      </effect>
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+   <ImageView fitHeight="140.0" fitWidth="181.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+
+ 
+</AnchorPane>

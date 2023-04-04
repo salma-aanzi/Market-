@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="600.0" style="-fx-background-color: BD9477;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.esalaf.ProduitController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Button fx:id="ok" layoutX="459.0" layoutY="262.0" onAction="#onSaveButtonClick" prefHeight="26.0" prefWidth="125.0" text="Enregistrer" textAlignment="CENTER">
+      <effect>
+         <Lighting diffuseConstant="2.0" surfaceScale="0.0">
+            <bumpInput>
+               <Shadow />
+            </bumpInput>
+
+
+         </Lighting>
+      </effect>
+      <font>
+         <Font size="18.0" />
+      </font></Button>
+    <TextField fx:id="ido" layoutX="-192.0" layoutY="448.0" />
+    <Button fx:id="ok1" layoutX="167.0" layoutY="262.0" onAction="#onDeleteButtonClick" prefHeight="26.0" prefWidth="112.0" text="Supprimer">
+      <effect>
+         <Lighting diffuseConstant="2.0" surfaceScale="0.0">
+            <bumpInput>
+               <Shadow />
+            </bumpInput>
+
+         </Lighting>
+      </effect>
+      <font>
+         <Font size="18.0" />
+      </font></Button>
+    <TableView fx:id="mytab" layoutX="28.0" layoutY="312.0" onMouseClicked="#tablehandleButtonAction" prefHeight="249.0" prefWidth="544.0" style="-fx-background-color: #EDF2F8;">
+        <columns>
+            <TableColumn fx:id="col_nom" prefWidth="152.0" style="-fx-background-color: F4DFBB;" text="Nom" />
+            <TableColumn fx:id="col_quan" prefWidth="99.0" style="-fx-background-color: F4DFBB;" text="Quantité" />
+         <TableColumn fx:id="col_cat" prefWidth="145.0" style="-fx-background-color: F4DFBB;" text="Catégories" />
+            <TableColumn fx:id="col_prix" minWidth="0.0" prefWidth="146.0" style="-fx-background-color: F4DFBB;" text="Prix ( DH )" />
+        </columns>
+    </TableView>
+    <Button layoutX="26.0" layoutY="262.0" mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="26.0" prefWidth="112.0" text="Modifier">
+      <effect>
+         <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.0">
+            <bumpInput>
+               <Shadow />
+            </bumpInput>
+
+         </Lighting>
+      </effect>
+      <font>
+         <Font size="18.0" />
+      </font></Button>
+    <Button layoutX="310.0" layoutY="262.0" mnemonicParsing="false" onAction="#clear" prefHeight="40.0" prefWidth="126.0" text="Réinitialiser">
+      <effect>
+         <Lighting diffuseConstant="2.0" surfaceScale="0.0">
+            <bumpInput>
+               <Shadow />
+            </bumpInput>
+
+         </Lighting>
+      </effect>
+      <font>
+         <Font size="18.0" />
+      </font></Button>
+   <ImageView fitHeight="107.0" fitWidth="90.0" layoutX="122.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+
+   <AnchorPane layoutX="8.0" layoutY="61.0" prefHeight="126.0" prefWidth="584.0" style="-fx-background-color: F4DFBB;">
+      <children>
+          <Label layoutX="17.0" layoutY="87.0" text="Prix :" textFill="#032e3f">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+          <Label layoutX="11.0" layoutY="5.0" text="Nom :" textFill="#021f2b">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+          <Label layoutX="11.0" layoutY="33.0" text="Quantité :" textFill="#001b26">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+         <Label layoutX="11.0" layoutY="60.0" text="Catégories :" textFill="#051922">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+          <TextField fx:id="quan" layoutX="150.0" layoutY="89.0" prefHeight="26.0" prefWidth="432.0" />
+         <TextField fx:id="cat" layoutX="150.0" layoutY="62.0" prefHeight="26.0" prefWidth="432.0" />
+          <TextField fx:id="nom" layoutX="150.0" layoutY="35.0" prefHeight="26.0" prefWidth="432.0" />
+          <TextField fx:id="prix" layoutX="150.0" layoutY="7.0" prefHeight="26.0" prefWidth="432.0" />
+      </children>
+   </AnchorPane>
+   <TextField fx:id="filterField" layoutX="-48.0" layoutY="17.0" prefHeight="25.0" prefWidth="709.0" promptText="Search" />
+
+
+</AnchorPane>
